@@ -1,5 +1,6 @@
-$font1: "Gilroy",
+$font1: "Futura PT",
 sans-serif;
+$resolution: 1650;
 
 a {
 	text-decoration: none;
@@ -16,11 +17,6 @@ body {
 	background: #ffffff;
 }
 
-.container {
-	width: 1170px;
-	margin: 0 auto;
-	box-sizing: border-box;
-}
 
 #jGrowl {
 	z-index: 999999;
@@ -34,12 +30,23 @@ body {
 	display: none;
 }
 
+img {
+	max-width: 100%;
+	height: auto;
+}
 
 .container {
 	display: flex;
-	width: 1065px;
+	width: vw(1065);
 	margin: 0 auto;
-	&__left {}
+	box-sizing: border-box;
 
-	&__right {}
+	&__left {
+		width: vw(666);
+		margin-right: vw(99);
+	}
+
+	&__right {
+		width: vw(300);
+	}
 }

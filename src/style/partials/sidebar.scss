@@ -1,0 +1,106 @@
+
+.sidebar-cash-anim{
+    display: block;
+    background-image: url(../img/anim-sidebar.gif) no-repeat center center;
+    position: absolute;
+    z-index: 0;
+    width: vw(300);
+    position: fixed;
+    top: -6.7vw;
+}
+.sidebar-cash {
+    position: fixed;
+    top: vw(119);
+    box-sizing: border-box;
+    width: vw(300);
+    padding: vw(34) vw(35) vw(40) vw(36);
+    text-align: center;
+    border-radius: vw(40);
+    background: #FFFFFF;
+    box-shadow: 0px 0px vw(50) rgba(0, 104, 179, 0.29);
+    z-index: 1;
+
+    &__pic {
+        img {}
+    }
+
+    &__title {
+        margin-top: vw(14);
+        text-align: center;
+        color: #006848;
+        font-weight: 500;
+        font-size: vw(30);
+        line-height: vw(32);
+    }
+
+    &__desc {
+        margin-top: vw(5);
+        text-align: center;
+        font-size: vw(16);
+        line-height: vw(21);
+    }
+
+    &__what {
+        margin-top: vw(27);
+        text-align: center;
+        color: #006848;
+        font-weight: 500;
+        font-size: vw(16);
+        line-height: vw(21);
+    }
+
+
+
+    &__reg {
+        margin-top: vw(8);
+        text-align: center;
+        font-size: vw(16);
+        line-height: vw(21);
+    }
+
+    &__more-btn {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: vw(204);
+        height: vw(47);
+        margin: 0 auto;
+        margin-top: vw(35);
+        text-transform: uppercase;
+        color: #FFFFFF;
+        border-radius: vw(40) 0px;
+        background: #1C62D9;
+        font-weight: 500;
+        font-size: vw(16);
+        line-height: vw(21);
+        cursor: pointer;
+    }
+}
+
+.sidebar-cash-steps {
+    display: flex;
+    justify-content: center;
+    margin-top: vw(10);
+
+    &__step {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        box-sizing: border-box;
+        width: vw(40);
+        height: vw(40);
+        margin: 0 vw(6.5);
+        text-align: center;
+        color: #006848;
+        border: vw(2) solid #006848;
+        border-radius: 50%;
+        background: #FFFFFF;
+        font-weight: 500;
+        font-size: vw(16);
+        line-height: vw(21);
+
+        &:not(.active) {
+            opacity: .3;
+        }
+    }
+}
