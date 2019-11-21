@@ -1,0 +1,45 @@
+$font1: "Gilroy",
+sans-serif;
+
+a {
+	text-decoration: none;
+}
+
+html,
+body {}
+
+body {
+	color: #3b3b3b;
+	font-family: $font1;
+	font-size: 16px;
+	margin: 0;
+	background: #ffffff;
+}
+
+.container {
+	width: 1170px;
+	margin: 0 auto;
+	box-sizing: border-box;
+}
+
+#jGrowl {
+	z-index: 999999;
+}
+
+*:focus {
+	outline: none;
+}
+
+.hide {
+	display: none;
+}
+
+
+.container {
+	display: flex;
+	width: 1065px;
+	margin: 0 auto;
+	&__left {}
+
+	&__right {}
+}
