@@ -1,15 +1,16 @@
 .sidebar-cash-anim {
-    display: block;
-    background-image: url(../img/anim-sidebar.gif) no-repeat center center;
     position: absolute;
-    z-index: 0;
-    width: vw(300);
     position: fixed;
+    z-index: 0;
     top: -6.7vw;
+    display: block;
+    width: vw(300);
+    background-image: url(../img/anim-sidebar.gif) no-repeat center center;
 }
 
 .sidebar-cash {
     position: fixed;
+    z-index: 1;
     top: vw(118);
     box-sizing: border-box;
     width: vw(300);
@@ -18,7 +19,6 @@
     border-radius: vw(40);
     background: #FFFFFF;
     box-shadow: 0px 0px vw(50) rgba(0, 104, 179, 0.29);
-    z-index: 1;
 
     &__pic {
         width: 100%;
@@ -47,14 +47,12 @@
     &__what {
         margin-top: vw(28);
         text-align: center;
+        letter-spacing: vw(0.5);
         color: #006848;
         font-weight: 500;
         font-size: vw(16);
         line-height: vw(21);
-        letter-spacing: vw(0.5);
     }
-
-
 
     &__reg {
         margin-top: vw(8);
@@ -71,6 +69,7 @@
         height: vw(47);
         margin: 0 auto;
         margin-top: vw(36);
+        cursor: pointer;
         text-transform: uppercase;
         color: #FFFFFF;
         border-radius: vw(40) 0px;
@@ -78,7 +77,6 @@
         font-weight: 500;
         font-size: vw(16);
         line-height: vw(21);
-        cursor: pointer;
     }
 }
 

@@ -1,33 +1,27 @@
 .site-header {
     position: absolute;
+    z-index: 100;
     left: 0;
     width: 100%;
+    transition-duration: .2s;
     background: #FCF036;
-    z-index: 100;
 
     .container {
         padding: 0 vw(19) 0 0;
     }
 
-    transition-duration: .2s;
-
     &.fixed {
-        top: 0;
         position: fixed;
+        top: 0;
     }
 }
 
 .site-header-menu {
-    height: vw(71);
     display: flex;
     align-items: center;
     justify-content: space-between;
     width: 100%;
-
-
-
-
-
+    height: vw(71);
 
     &__link {
         text-align: center;
@@ -40,7 +34,9 @@
             @include demi();
         }
 
-        &:hover {}
+        &:hover {
+            color: rgb(81, 78, 0);
+        }
 
         &:active {}
 
