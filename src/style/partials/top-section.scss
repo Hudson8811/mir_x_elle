@@ -1,0 +1,53 @@
+.top-section {
+    padding-top: vw(71);
+    padding-bottom: vw(107);
+}
+
+.sectio-top-logo {
+    margin-left: vw(-1);
+
+    &__pic {
+        width: vw(337);
+
+        img {}
+    }
+
+    &__spec {
+        width: vw(118);
+        height: vw(27);
+        margin-top: vw(1);
+        margin-left: vw(17);
+        text-align: center;
+        background: #FCF036;
+        font-size: vw(16);
+        line-height: vw(24);
+    }
+}
+
+.page-title {
+    margin-top: vw(38);
+    text-transform: uppercase;
+    color: #000000;
+    @include demi();
+    font-size: vw(65);
+    line-height: vw(70);
+
+    +.def-par {
+
+        margin-top: vw(28);
+    }
+}
+
+.def-par {
+    font-size: vw(20);
+    line-height: vw(28);
+    color: #000000;
+
+    .bold {
+        font-weight: 500;
+    }
+
+    +.def-par {
+        margin-top: vw(20);
+    }
+}

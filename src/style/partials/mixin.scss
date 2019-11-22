@@ -29,3 +29,8 @@
 @function vw($px) {
   @return (($px/$resolution) * 100)+vw;
 }
+
+@mixin demi(){
+  font-family: Futura PT Demi;
+  font-weight: 500;
+}
