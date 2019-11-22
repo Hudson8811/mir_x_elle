@@ -8,6 +8,13 @@
     .container {
         padding: 0 vw(19) 0 0;
     }
+
+    transition-duration: .2s;
+
+    &.fixed {
+        top: 0;
+        position: fixed;
+    }
 }
 
 .site-header-menu {

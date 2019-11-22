@@ -1,5 +1,4 @@
-
-.sidebar-cash-anim{
+.sidebar-cash-anim {
     display: block;
     background-image: url(../img/anim-sidebar.gif) no-repeat center center;
     position: absolute;
@@ -8,6 +7,7 @@
     position: fixed;
     top: -6.7vw;
 }
+
 .sidebar-cash {
     position: fixed;
     top: vw(118);
@@ -21,7 +21,11 @@
     z-index: 1;
 
     &__pic {
-        img {}
+        width: 100%;
+
+        img {
+            width: 100%;
+        }
     }
 
     &__title {
@@ -104,4 +108,9 @@
             opacity: .3;
         }
     }
+}
+
+
+body {
+    min-height: 10000px;
 }
