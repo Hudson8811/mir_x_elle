@@ -1,3 +1,189 @@
 .a4-products{
   margin-top: vw(91);
 }
+
+#querstion{
+  margin-top: vw(60);
+  position: relative;
+
+  .variants{
+    display: flex;
+    margin-top: vw(40);
+    justify-content: space-between;
+    .vaiant{
+      width: 30%;
+      text-align: center;
+      cursor: pointer;
+      .img-block{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        height: vw(340);
+        z-index: 1;
+        img{
+          max-width: 100%;
+          max-height: 100%;
+          display: block;
+          z-index: 3;
+          position: relative;
+          transition: 0.3s ease;
+          top: 0;
+        }
+        &::before,
+        &::after{
+          content: "";
+          pointer-events: none;
+          position: absolute;
+          width: vw(146);
+          height: vw(55);
+          background-repeat: no-repeat;
+          background-position: center center;
+          background-size: contain;
+          z-index: -1;
+          transition: 0.3s ease;
+          opacity: 0;
+          margin: 0;
+        }
+        &::before{
+          background-image: url(../img/blue.png);
+        }
+        &::after{
+          background-image: url(../img/green.png);
+        }
+      }
+      .text{
+        font-size: vw(18);
+        line-height: vw(26);
+        margin-top: vw(40);
+        position: relative;
+        transition: 0.3s ease;
+        transform: scale(1);
+        &::before{
+          top: vw(-16);
+          left: 50%;
+          margin-left: vw(-5.625);
+          -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
+          position: absolute;
+          display: block;
+          width: vw(11.25);
+          height: vw(13);
+          content: '';
+          background: url(../img/triangle.svg) no-repeat center center;
+          background-size: contain;
+        }
+      }
+
+
+
+      &:hover{
+        .img-block{
+          img{
+            top: vw(-25);
+          }
+          &::before,
+          &::after{
+            opacity: 1;
+          }
+        }
+        .text{
+          transform: scale(1.1);
+        }
+      }
+
+      &.variant-1{
+        .img-block{
+          &::before{
+            transform: rotate(-62deg);
+            bottom: 30%;
+          }
+          &::after{
+            transform: rotate(44deg);
+            bottom: 10%;
+          }
+        }
+        &:hover{
+          .img-block{
+            &::before{
+              bottom: 60%;
+              margin-left: vw(70);
+            }
+            &::after{
+              bottom: 40%;
+              margin-left: vw(-70);
+            }
+          }
+        }
+      }
+
+      &.variant-2{
+        .img-block{
+          &::before{
+            transform: rotate(60deg);
+            bottom: 30%;
+          }
+          &::after{
+            transform: rotate(-57deg);
+            bottom: 30%;
+          }
+        }
+        &:hover{
+          .img-block{
+            &::before{
+              bottom: 60%;
+              margin-left: vw(-120);
+            }
+            &::after{
+              bottom: 50%;
+              margin-left: vw(90);
+            }
+          }
+        }
+      }
+
+
+      &.variant-3{
+        .img-block{
+          &::before{
+            transform: rotate(-62deg);
+            bottom: 20%;
+          }
+          &::after{
+            transform: rotate(44deg);
+            bottom: 30%;
+          }
+        }
+        &:hover{
+          .img-block{
+            &::before{
+              bottom: 50%;
+              margin-left: vw(70);
+            }
+            &::after{
+              bottom: 60%;
+              margin-left: vw(-70);
+            }
+          }
+        }
+      }
+
+    }
+  }
+}
+#quest-count{
+  position: absolute;
+  top: vw(-4);
+  left: vw(-51);
+  display: block;
+  width: vw(38);
+  height: vw(38);
+  text-align: center;
+  color: #000000;
+  border-radius: 50%;
+  background: #FCF036;
+  font-size: vw(20);
+  line-height: vw(38);
+  @include demi();
+}
+
