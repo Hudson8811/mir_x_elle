@@ -48,6 +48,13 @@
     .bold {
         font-weight: 500;
     }
+    
+    a{
+        color: #156d00;
+        &:hover{
+            text-decoration: underline;
+        }
+    }
 
     +.def-par {
         margin-top: vw(20);
