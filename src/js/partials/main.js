@@ -16,4 +16,10 @@ $(document).ready(function() {
     });
 
 
+    $('.site-header-menu__link').click(function () {
+        event.preventDefault();
+        $("html, body").animate({ scrollTop: $('#start').offset().top }, 600);
+    });
+
+
 });

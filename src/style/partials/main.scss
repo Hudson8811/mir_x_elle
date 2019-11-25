@@ -50,3 +50,10 @@ img {
 		width: vw(300);
 	}
 }
+
+.tab-content{
+	display: none;
+	&.active{
+		display: block;
+	}
+}

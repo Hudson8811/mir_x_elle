@@ -38,7 +38,9 @@
             color: rgb(81, 78, 0);
         }
 
-        &:active {}
+        &.active {
+            display: none;
+        }
 
         &:focus {}
     }
