@@ -1,6 +1,5 @@
 .sidebar-cash-anim {
-    position: absolute;
-    position: fixed;
+    position: sticky;
     z-index: 0;
     top: -6.7vw;
     display: block;
@@ -9,7 +8,7 @@
 }
 
 .sidebar-cash {
-    position: fixed;
+    position: sticky;
     z-index: 1;
     top: vw(118);
     box-sizing: border-box;

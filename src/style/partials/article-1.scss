@@ -470,3 +470,238 @@
     }
 
 }
+
+.product-a1-7 {
+    margin-top: vw(91);
+
+    .product__decoration {
+        &--blue {
+            z-index: 1;
+            top: vw(237);
+            left: vw(150);
+            transform: matrix(0.94, 0.35, 0.35, -0.94, 0, 0);
+        }
+
+        &--green {
+            top: vw(317);
+            right: vw(30);
+            transform: matrix(0.88, -0.48, -0.48, -0.88, 0, 0);
+        }
+
+
+    }
+
+    .product__prod-pic {
+        &--1 {
+            position: absolute;
+            top: vw(38);
+            right: vw(389);
+            width: vw(252);
+        }
+
+        &--2 {
+            width: vw(135);
+            margin-left: vw(345);
+            padding-top: vw(146);
+        }
+    }
+
+    .prod-info {
+        &--1 {
+            top: vw(376);
+            left: 0;
+            width: vw(260);
+
+            &::before {
+                top: vw(-33);
+                right: vw(122);
+                transform: rotate(90deg);
+            }
+        }
+
+        &--2 {
+            top: vw(45);
+            right: vw(35);
+            width: vw(230);
+
+            &::before {
+                top: vw(17);
+                left: vw(-35);
+                transform: rotate(-90deg);
+            }
+        }
+    }
+
+}
+
+.product-a1-8 {
+    margin-top: vw(80);
+
+    .product__decoration {
+        &--blue {
+            top: vw(296);
+            left: vw(282);
+            transform: matrix(0.94, 0.35, 0.35, -0.94, 0, 0);
+        }
+
+        &--green {
+            top: vw(161);
+            left: vw(3);
+            transform: matrix(0.88, -0.48, -0.48, -0.88, 0, 0);
+        }
+
+
+    }
+
+    .product__prod-pic {
+        &--1 {
+            width: vw(180);
+            margin-top: vw(34);
+            margin-left: vw(68);
+        }
+
+
+    }
+
+    .prod-info {
+        &--1 {
+            top: vw(171);
+            right: vw(86);
+            width: vw(180);
+
+            &::before {
+                top: vw(2);
+                left: vw(-36);
+            }
+        }
+
+    }
+
+}
+
+.product-a1-9 {
+    margin-top: vw(63);
+
+    .product__decoration {
+        &--blue {
+            top: vw(86);
+            left: vw(54);
+            transform: matrix(0.94, 0.35, 0.35, -0.94, 0, 0);
+        }
+
+        &--green {
+            top: vw(291);
+            right: vw(-21);
+            transform: matrix(0.88, -0.48, -0.48, -0.88, 0, 0);
+            z-index: 1;
+        }
+
+
+    }
+
+    .product__prod-pic {
+        &--1 {
+            position: absolute;
+            top: vw(190);
+            right: vw(63);
+            width: vw(142);
+        }
+
+        &--2 {
+            width: vw(281);
+            margin-left: vw(27);
+            padding-top: vw(9);
+        }
+    }
+
+
+    .prod-info {
+        &--1 {
+            top: vw(49);
+            right: vw(17);
+            width: vw(250);
+
+            &::before {
+                top: vw(11);
+                left: vw(-36);
+            }
+        }
+
+        &--2 {
+            top: vw(432);
+            right: vw(1);
+            width: vw(266);
+
+            &::before {
+                top: vw(-27);
+                left: vw(128);
+                transform: rotate(90deg);
+            }
+        }
+    }
+
+}
+
+.product-a1-10 {
+    margin-top: vw(152);
+
+    .product__decoration {
+        &--blue {
+            top: vw(472 - 88);
+            left: vw(203);
+            transform: matrix(0.94, 0.35, 0.35, -0.94, 0, 0);
+            z-index: 1;
+        }
+
+        &--green {
+            top: vw(153 - 88);
+            right: vw(92);
+            transform: matrix(0.88, -0.48, -0.48, -0.88, 0, 0);
+            z-index: 1;
+        }
+
+
+    }
+
+    .product__prod-pic {
+        &--1 {
+            position: absolute;
+            top: vw(301 - 88);
+            left: vw(98);
+            width: vw(171);
+        }
+
+        &--2 {
+            width: vw(197);
+            margin-left: vw(381);
+            margin-top: vw(-1);
+        }
+    }
+
+
+    .prod-info {
+        &--1 {
+            top: vw(196 - 88);
+            left: vw(-6);
+            width: vw(140);
+
+            &::before {
+                top: vw(13);
+                right: vw(-32);
+                transform: rotate(-90deg);
+            }
+        }
+
+        &--2 {
+            top: vw(146 - 88);
+            right: vw(250);
+
+            &::before {
+                top: vw(4);
+                left: vw(161);
+                transform: rotate(180deg);
+            }
+        }
+    }
+
+}
