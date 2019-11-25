@@ -86,6 +86,7 @@
 .prod-info {
     position: absolute;
     width: vw(150);
+    transition: 0.3s ease;
 
     &__desc {
         color: #000000;
@@ -100,6 +101,9 @@
         @include demi();
     }
 
+    &.hovered{
+        transform: scale(1.1);
+    }
     &::before {
         position: absolute;
         display: block;
@@ -110,7 +114,17 @@
         background-size: contain;
     }
 }
+.product__prod-pic{
+    img{
+        transition: 0.3s ease;
+    }
 
+    &.hovered{
+        img{
+            transform: scale(1.1);
+        }
+    }
+}
 .product-a1-1 {
     margin-top: vw(67);
 
@@ -131,6 +145,7 @@
     }
 
     .product__prod-pic {
+
         &--1 {
             width: vw(111);
             margin-left: vw(204);
@@ -266,7 +281,7 @@
     }
 
     .prod-info {
-        &--1 {
+        &--2 {
             top: vw(43);
             left: 0;
             width: vw(239);
@@ -278,7 +293,7 @@
             }
         }
 
-        &--2 {
+        &--1 {
             top: vw(321);
             left: vw(151);
 
@@ -388,7 +403,7 @@
     }
 
     .prod-info {
-        &--1 {
+        &--2{
             top: vw(315);
             left: 0;
 
@@ -399,7 +414,7 @@
             }
         }
 
-        &--2 {
+        &--1 {
             top: vw(43);
             right: vw(176);
             width: vw(225);
@@ -601,14 +616,14 @@
     }
 
     .product__prod-pic {
-        &--1 {
+        &--2 {
             position: absolute;
             top: vw(190);
             right: vw(63);
             width: vw(142);
         }
 
-        &--2 {
+        &--1 {
             width: vw(281);
             margin-left: vw(27);
             padding-top: vw(9);
