@@ -8,3 +8,4 @@
 
 //= partials/main.js
 //= partials/header.js
+//= partials/test.js
