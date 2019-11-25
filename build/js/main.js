@@ -46,6 +46,12 @@ $(document).ready(function() {
     $('.site-header-menu__link').click(function () {
         event.preventDefault();
         $("html, body").animate({ scrollTop: $('#start').offset().top }, 600);
+
+        $(this).addClass('active').siblings('.site-header-menu__link').removeClass('active');
+        var tab = $(this).data('tab');
+        $('.tab-content:not(#tab-content-'+tab+')').fadeOut(300, function () {
+            $('#tab-content-'+tab).fadeIn(300);
+        });
     });
 
 
