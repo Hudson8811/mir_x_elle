@@ -5,7 +5,16 @@
 #querstion{
   margin-top: vw(60);
   position: relative;
-
+  #testover{
+    z-index: 20;
+    background: rgba(255, 255, 255, 0.51);
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    display: none;
+  }
   .variants{
     display: flex;
     margin-top: vw(40);
@@ -187,3 +196,7 @@
   @include demi();
 }
 
+#otvet{
+  display: none;
+  margin-top: vw(60);
+}
