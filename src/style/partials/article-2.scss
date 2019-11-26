@@ -1,4 +1,8 @@
 .a2-products {
   margin-top: vw(91);
   counter-reset: products;
+  .product{
+    margin-top: vw(67);
+  }
 }
+
