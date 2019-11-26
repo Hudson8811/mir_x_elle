@@ -58,6 +58,10 @@
         text-align: center;
         font-size: vw(16);
         line-height: vw(21);
+        min-height: vw(85);
+        &:not(.active){
+            display: none;
+        }
     }
 
     &__more-btn {
@@ -100,9 +104,15 @@
         font-weight: 500;
         font-size: vw(16);
         line-height: vw(21);
-
+        opacity: 1;
+        transition: 0.3s ease;
         &:not(.active) {
             opacity: .3;
+            cursor: pointer;
+            &:hover{
+                opacity: 0.6;
+            }
         }
+
     }
 }

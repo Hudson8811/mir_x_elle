@@ -54,6 +54,15 @@ $(document).ready(function() {
         });
     });
 
+    $('.sidebar-cash-steps__step').click(function () {
+        if (!$(this).hasClass('active')){
+            var step = $(this).data('step');
+            $(this).addClass('active').siblings('.sidebar-cash-steps__step').removeClass('active');
+            $('.sidebar-cash__reg.active').removeClass('active').fadeOut(150,function () {
+                $('.sidebar-cash__reg[data-step='+step+']').fadeIn(150).addClass('active');
+            });
+        }
+    });
 
 });
 $(document).ready(function () {
