@@ -86,7 +86,6 @@
 .prod-info {
     position: absolute;
     width: vw(150);
-    transition: 0.3s ease;
 
     &__desc {
         color: #000000;
@@ -101,9 +100,6 @@
         @include demi();
     }
 
-    &.hovered{
-        transform: scale(1.1);
-    }
     &::before {
         position: absolute;
         display: block;
@@ -260,6 +256,7 @@
             top: vw(300);
             right: vw(25);
             transform: matrix(0.89, 0.46, 0.46, -0.89, 0, 0);
+            z-index: 1;
         }
 
 
@@ -315,6 +312,7 @@
             top: vw(202);
             right: vw(16);
             transform: rotate(-37.66deg);
+            z-index: 1;
         }
 
         &--green {
@@ -436,6 +434,7 @@
             top: vw(57);
             left: vw(113);
             transform: matrix(0.74, -0.67, -0.67, -0.74, 0, 0);
+            z-index: 1;
         }
 
         &--green {
@@ -492,10 +491,10 @@
 
     .product__decoration {
         &--blue {
-            z-index: 1;
             top: vw(237);
             left: vw(150);
             transform: matrix(0.94, 0.35, 0.35, -0.94, 0, 0);
+            z-index: 1;
         }
 
         &--green {
@@ -564,6 +563,7 @@
             top: vw(161);
             left: vw(3);
             transform: matrix(0.88, -0.48, -0.48, -0.88, 0, 0);
+            z-index: 1;
         }
 
 
@@ -603,6 +603,7 @@
             top: vw(86);
             left: vw(54);
             transform: matrix(0.94, 0.35, 0.35, -0.94, 0, 0);
+            z-index: 1;
         }
 
         &--green {

@@ -27,7 +27,7 @@
 }
 
 @function vw($px) {
-  @return (($px/$resolution) * 100)+vw;
+  @return $px+px;
 }
 
 @mixin demi(){

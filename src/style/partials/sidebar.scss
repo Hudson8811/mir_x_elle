@@ -80,6 +80,10 @@
         font-weight: 500;
         font-size: vw(16);
         line-height: vw(21);
+        transition: 0.3s ease;
+        &:hover{
+            background: #16458a;
+        }
     }
 }
 
