@@ -57,3 +57,11 @@ img {
 		display: block;
 	}
 }
+
+.emoji{
+	display: inline-block;
+	width: 20px;
+	height: 20px;
+	background: url("../img/smile.png") center center no-repeat;
+	background-size: 100% 100%;
+}
