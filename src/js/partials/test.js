@@ -86,8 +86,7 @@ $(function() {
                 success: function(data) {
                     //ответ от сервера
                     var parse = JSON.parse(data);
-                    var results = parse.results;
-                    var share = results[0].share;
+                    var share = parse.results;
 
                     //data на блок share
                     $('.social-block').attr('data-url', share[0].url);
