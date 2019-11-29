@@ -63,10 +63,12 @@ $(function() {
             $.getJSON('results.json', function(data) {
                 results = data.results;
                 var title = results[mostAnsver].title,
-                    text = results[mostAnsver].text;
+                    text = results[mostAnsver].text,
+                    img = results[mostAnsver].img;
 
-                $('#otvet .title-l2').html(title);
+                $('#otvet .img .title span').html(title);
                 $('#otvet .def-par').html(text);
+                $('#otvet .img img').attr('src',img);
             });
             $('#querstion').fadeOut(300);
             setTimeout(function () {

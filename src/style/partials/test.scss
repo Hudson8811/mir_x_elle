@@ -197,6 +197,111 @@
 }
 
 #otvet{
-  display: none;
+  //display: none;
   margin-top: vw(60);
+  .img{
+    width: 100%;
+    position: relative;
+    margin-bottom: 30px;
+    img{
+      display: block;
+      width: 100%;
+    }
+    .title{
+      width: 100%;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: absolute;
+      left: 0;
+      top: 0;
+      span{
+        display: block;
+        font-weight: 500;
+        font-size: 20px;
+        text-align: center;
+        text-transform: uppercase;
+        color: #000000;
+        padding: 9px;
+        background: #FCF036;
+      }
+    }
+  }
+  .share-row{
+    display: flex;
+    align-items: center;
+    margin-top: 40px;
+    .share{
+      display: flex;
+      align-items: center;
+      .text{
+        font-size: 16px;
+        color: #000000;
+      }
+      .social-block{
+        margin-left: 10px;
+        display: flex;
+        align-items: center;
+        .soc-link{
+          border: none;
+          cursor: pointer;
+          border-radius: 100%;
+          width: 40px;
+          height: 40px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          margin-left: 10px;
+          &.vk{
+            background: #5181B8;
+            &:hover{
+              background: #39587e;
+            }
+          }
+          &.fb{
+            background:#3B5998;
+            &:hover{
+              background: #223056;
+            }
+          }
+          &.tw{
+            background: #41ABE1;
+            &:hover{
+              background: #2d7da5;
+            }
+          }
+          svg{
+            width: 20px;
+            height: 20px;
+            *{
+              fill: #FFFFFF;
+            }
+          }
+        }
+      }
+    }
+    .again{
+      display: flex;
+      align-items: center;
+      margin-left: 80px;
+      .text{
+        font-size: 16px;
+        color: #000000;
+        margin-right: 20px;
+      }
+      .again-link{
+        display: block;
+        width: 40px;
+        height: 40px;
+        border-radius: 100%;
+        background: #FCF036 url("../img/again.svg") 10px 10px no-repeat;
+        transition: 0.3s ease;
+        &:hover{
+          transform: rotate(180deg);
+        }
+      }
+    }
+  }
 }
+
