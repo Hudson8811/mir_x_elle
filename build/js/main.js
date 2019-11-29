@@ -200,6 +200,25 @@ $(function() {
                 $('#otvet').fadeIn(300);
                 $('#testover').fadeOut(300);
             },300);
+
+            //запрос share
+            $.ajax({
+                type: "POST",
+                url: "/share/",
+                data: { ansver : mostAnsver },
+                success: function(data) {
+                    //ответ от сервера
+                    var parse = JSON.parse(data);
+                    var results = parse.results;
+                    var share = results[0].share;
+
+                    //data на блок share
+                    $('.social-block').attr('data-url', share[0].url);
+                    $('.social-block').attr('data-image', share[0].image);
+                    $('.social-block').attr('data-title', share[0].title);
+                    $('.social-block').attr('data-description', share[0].description);
+                }
+            });
         }
     });
 
