@@ -30,33 +30,94 @@
     margin-top: vw(38);
     text-transform: uppercase;
     color: #000000;
-    @include demi();
     font-size: vw(65);
     line-height: vw(70);
+    @include demi();
 
     +.def-par {
-
         margin-top: vw(28);
     }
 }
 
 .def-par {
+    color: #000000;
     font-size: vw(20);
     line-height: vw(28);
-    color: #000000;
 
     .bold {
         font-weight: 500;
     }
-    
-    a{
+
+    a {
         color: #156d00;
-        &:hover{
+
+        &:hover {
             text-decoration: underline;
         }
     }
 
     +.def-par {
         margin-top: vw(20);
+    }
+}
+
+
+
+@media screen and (max-width:1000px) {
+    .sectio-top-logo {
+        position: relative;
+        z-index: 10;
+        display: flex;
+        justify-content: center;
+        ;
+    }
+
+    .top-section-content {
+        margin-top: 43px;
+        margin-right: -10px;
+        margin-left: -10px;
+        padding: 38px 20px 50px;
+        border-radius: 40px 40px 0 0 ;
+        background: #FFFFFF;
+        box-shadow: 0px 0px 50px rgba(0, 104, 179, 0.29);
+    }
+
+    .page-title {
+        margin-top: 0;
+        text-transform: uppercase;
+        color: #000000;
+        font-weight: 500;
+        font-size: 40px;
+        line-height: 1.3;
+    }
+
+    .def-par {
+        font-size: 18px;
+        line-height: 1.3;
+        &+.def-par {
+            margin-top: 15px;
+        }
+    }
+    .page-title+.def-par {
+        margin-top: 20px;
+    }
+}
+
+@media screen and (max-width:600px) {
+    .top-section-content {
+        padding: 38px 10px 0;
+    }
+
+    .page-title {
+        text-transform: uppercase;
+        color: #000000;
+        font-weight: 500;
+        font-size: 40px;
+        line-height: 45px;
+    }
+
+    .def-par {
+        font-size: 14px;
+        line-height: 20px;
     }
 }

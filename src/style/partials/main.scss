@@ -65,3 +65,33 @@ img {
 	background: url("../img/smile.png") center center no-repeat;
 	background-size: 100% 100%;
 }
+
+@media screen and (max-width:1215px){
+	.container{
+		width: calc(100% - 60px);
+	}
+	.container__right{
+		width: 250px;
+	}
+	.container__left {
+		width: calc(100% - 40px - 300px);
+		margin-right: 40px;
+		padding-left: 32px;
+		box-sizing: border-box;
+	}
+}
+
+@media screen and (max-width:1000px){
+	.container{
+		width: calc(100% - 40px);
+		flex-direction: column;
+	}
+	.container__right{
+		width: 100%;
+	}
+	.container__left {
+		width: 100%;
+		margin-right: 0;
+		padding-left: 0;
+	}
+}

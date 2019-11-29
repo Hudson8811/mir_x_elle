@@ -1,7 +1,7 @@
 .sidebar-cash-anim {
     position: fixed;
     z-index: 0;
-    top: -6.7vw;
+    top: -151px;
     display: block;
     width: vw(300);
     background-image: url(../img/anim-sidebar.gif) no-repeat center center;
@@ -59,7 +59,8 @@
         font-size: vw(16);
         line-height: vw(21);
         min-height: vw(85);
-        &:not(.active){
+
+        &:not(.active) {
             display: none;
         }
     }
@@ -81,7 +82,8 @@
         font-size: vw(16);
         line-height: vw(21);
         transition: 0.3s ease;
-        &:hover{
+
+        &:hover {
             background: #16458a;
         }
     }
@@ -110,13 +112,22 @@
         line-height: vw(21);
         opacity: 1;
         transition: 0.3s ease;
+
         &:not(.active) {
             opacity: .3;
             cursor: pointer;
-            &:hover{
+
+            &:hover {
                 opacity: 0.6;
             }
         }
 
+    }
+}
+
+
+@media screen and (max-width:1000px) {
+    .sidebar-cash-anim {
+        display: none;
     }
 }

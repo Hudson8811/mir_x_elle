@@ -49,3 +49,11 @@
 .place-for-header {
     height: vw(71);
 }
+
+
+
+@media screen and (max-width:1000px) {
+    .site-header, .place-for-header{
+        display: none;
+    }
+}
