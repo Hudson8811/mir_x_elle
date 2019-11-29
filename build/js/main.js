@@ -189,7 +189,7 @@ $(function() {
                 results = data.results;
                 var title = results[mostAnsver].title,
                     text = results[mostAnsver].text,
-                    img = results[mostAnsver].img;
+                    img = results[mostAnsver].image;
 
                 $('#otvet .img .title span').html(title);
                 $('#otvet .def-par').html(text);
@@ -207,7 +207,7 @@ $(function() {
         startTest();
         $('#otvet').fadeOut(300,function () {
             $('#querstion').fadeIn(300);
-            $('#testover').fadeIn(300);
+            $('#testover').fadeOut(300);
         });
     });
 
