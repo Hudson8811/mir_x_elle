@@ -7,7 +7,8 @@
     height: 150px;
     background: url(../img/anim-sidebar.gif) no-repeat center center;
     @include media((
-        width: (lg: 100%),
+            width: (lg: 100%),
+            background-size: (lg: 100%),
     ));
 }
 
