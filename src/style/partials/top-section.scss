@@ -1,6 +1,10 @@
 .top-section {
     padding-top: vw(71);
     padding-bottom: vw(107);
+    @include media((
+            padding-bottom: (md: 0px),
+            padding-top: (md: 20px),
+    ));
 }
 
 .sectio-top-logo {
@@ -8,7 +12,9 @@
 
     &__pic {
         width: vw(337);
-
+        @include media((
+                width: (sm: 220px),
+        ));
         img {
             width: 100%;
         }
@@ -77,7 +83,7 @@
         margin-right: -10px;
         margin-left: -10px;
         padding: 38px 20px 50px;
-        border-radius: 40px 40px 0 0 ;
+        border-radius: 40px;
         background: #FFFFFF;
         box-shadow: 0px 0px 50px rgba(0, 104, 179, 0.29);
     }
@@ -103,9 +109,9 @@
     }
 }
 
-@media screen and (max-width:600px) {
+@media screen and (max-width:700px) {
     .top-section-content {
-        padding: 38px 10px 0;
+        padding: 38px 10px 34px;
     }
 
     .page-title {

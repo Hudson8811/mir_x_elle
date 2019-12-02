@@ -48,6 +48,7 @@ img {
 
 	&__right {
 		width: vw(300);
+		border-radius: 0 0 40px 40px;
 	}
 }
 
@@ -64,6 +65,10 @@ img {
 	height: 20px;
 	background: url("../img/smile.png") center center no-repeat;
 	background-size: 100% 100%;
+	@include media((
+					width: (sm: 15px),
+					height: (sm: 15px),
+	));
 }
 
 @media screen and (max-width:1215px){
@@ -74,8 +79,7 @@ img {
 		width: 250px;
 	}
 	.container__left {
-		width: calc(100% - 40px - 300px);
-		margin-right: 40px;
+		margin-right: auto;
 		padding-left: 32px;
 		box-sizing: border-box;
 	}
@@ -88,6 +92,7 @@ img {
 	}
 	.container__right{
 		width: 100%;
+		display: none;
 	}
 	.container__left {
 		width: 100%;

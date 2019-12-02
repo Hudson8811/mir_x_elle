@@ -107,6 +107,18 @@ $(document).ready(function() {
         });
     }
 
+
+    $('.container__right .sidebar-cash').clone().appendTo("#mobile-mig");
+    
+    $('#mobile-fixed').click(function () {
+        $.fancybox.open({
+            src  : '.container__right .sidebar-cash',
+            type : 'inline',
+            toolbar  : false,
+            smallBtn : true,
+        });
+    });
+
 });
 $(document).ready(function () {
     var $headerP = $('.place-for-header');

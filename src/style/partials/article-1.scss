@@ -1,6 +1,9 @@
 .a1-products {
     margin-top: vw(91);
     counter-reset: products;
+    @include media((
+            margin-top: (sm: 50px),
+    ));
 }
 
 .title-l2 {
@@ -8,9 +11,15 @@
     font-size: vw(40);
     line-height: vw(51);
     @include demi();
-
+    @include media((
+            font-size: (md: 28px),
+            line-height: (md: 36px)
+    ));
     +.def-par {
         margin-top: vw(31);
+        @include media((
+                margin-top: (md: 20px),
+        ));
     }
 }
 
@@ -20,7 +29,10 @@
     font-size: vw(20);
     line-height: vw(28);
     @include demi();
-
+    @include media((
+            font-size: (sm: 14px),
+            line-height: (sm: 20px)
+    ));
     +.def-par {
         margin-top: vw(20);
     }
@@ -28,7 +40,10 @@
 
 .product {
     position: relative;
-
+    @include media((
+            padding-top: (md: 37px),
+            margin-top: (md: 40px !important),
+    ));
     &::before {
         position: absolute;
         top: vw(-4);
@@ -45,12 +60,25 @@
         font-size: vw(20);
         line-height: vw(38);
         @include demi();
+        @include media((
+                width: (md: 30px),
+                height: (md: 30px),
+                font-size: (md: 14px),
+                line-height: (md: 30px),
+                top: (md: 0px),
+                left: (md: 0px),
+        ));
     }
 
     &__bottom {
         position: relative;
         z-index: 1;
         width: 100%;
+        @include media((
+                width: (md: 666px,sm:280px),
+                margin-left: (md: auto),
+                margin-right: (md: auto),
+        ));
     }
 
     &__decoration {
@@ -61,7 +89,10 @@
         background-position: center center;
         background-size: contain;
         pointer-events: none;
-
+        @include media((
+                width: (sm:76px),
+                height: (sm:29px),
+        ));
         &--blue {
             background-image: url(../img/blue.png);
         }
@@ -86,11 +117,19 @@
 .prod-info {
     position: absolute;
     width: vw(150);
-
+    @include media((
+            width: (sm:100% !important),
+            position: (sm:static),
+            margin-top: (sm:15px),
+    ));
     &__desc {
         color: #000000;
         font-size: vw(14);
         line-height: vw(18);
+        @include media((
+                font-size: (sm:12px),
+                line-height: (sm:15px),
+        ));
     }
 
     &__price {
@@ -98,6 +137,10 @@
         color: #000000;
         font-size: vw(14);
         @include demi();
+        @include media((
+                font-size: (sm:12px),
+                margin-top: (sm:8px),
+        ));
     }
 
     &::before {
@@ -108,6 +151,9 @@
         content: '';
         background: url(../img/triangle.svg) no-repeat center center;
         background-size: contain;
+        @include media((
+                display: (sm:none),
+        ));
     }
 }
 .product__prod-pic{
@@ -129,12 +175,20 @@
             top: vw(104);
             left: vw(61);
             transform: rotate(49.41deg);
+            @include media((
+                    left: (sm:25px),
+                    top: (sm:43px),
+            ));
         }
 
         &--green {
             top: vw(307);
             right: vw(85);
             transform: rotate(-22.2deg);
+            @include media((
+                    right: (sm:35px),
+                    top: (sm:129px),
+            ));
         }
 
 
@@ -146,6 +200,11 @@
             width: vw(111);
             margin-left: vw(204);
             padding-top: vw(12);
+            @include media((
+                    width: (sm:46px),
+                    margin-left: (sm:85px),
+                    padding-top: (sm:5px),
+            ));
         }
 
         &--2 {
@@ -153,6 +212,11 @@
             top: vw(102);
             right: vw(231);
             width: vw(81);
+            @include media((
+                    right: (sm:97px),
+                    top: (sm:42px),
+                    width: (sm:34px),
+            ));
         }
     }
 
@@ -189,12 +253,20 @@
             top: vw(399);
             right: vw(14);
             transform: rotate(-31.81deg);
+            @include media((
+                    right: (sm:5px),
+                    top: (sm:147px),
+            ));
         }
 
         &--green {
             top: vw(409);
             left: vw(73);
             transform: rotate(13.17deg);
+            @include media((
+                    left: (sm:30px),
+                    top: (sm:151px),
+            ));
         }
 
 
@@ -205,6 +277,11 @@
             width: vw(245);
             margin-left: vw(180);
             padding-top: vw(30);
+            @include media((
+                    width: (sm:103px),
+                    margin-left: (sm:75px),
+                    padding-top: (sm:12px),
+            ));
         }
 
         &--2 {
@@ -212,6 +289,11 @@
             top: vw(198);
             right: vw(98);
             width: vw(118);
+            @include media((
+                    top: (sm:83px),
+                    right: (sm:41px),
+                    width: (sm:49px),
+            ));
         }
     }
 
@@ -250,6 +332,10 @@
             top: vw(50);
             right: vw(31);
             transform: rotate(-37.66deg);
+            @include media((
+                    right: (sm:21px),
+                    top: (sm:13px),
+            ));
         }
 
         &--green {
@@ -257,6 +343,10 @@
             right: vw(25);
             transform: matrix(0.89, 0.46, 0.46, -0.89, 0, 0);
             z-index: 1;
+            @include media((
+                    right: (sm:10px),
+                    top: (sm:126px),
+            ));
         }
 
 
@@ -267,13 +357,22 @@
             width: vw(163);
             margin-left: vw(362);
             padding-top: vw(52);
+            @include media((
+                    width: (sm:68px),
+                    margin-left: (sm:152px),
+                    padding-top: (sm:21px),
+            ));
         }
 
         &--2 {
             position: absolute;
             top: vw(149);
             right: vw(276);
-            width: vw(353);
+            width: vw(353);@include media((
+                top: (sm:62px),
+                right: (sm:116px),
+                width: (sm:148px),
+        ));
         }
     }
 
@@ -313,12 +412,20 @@
             right: vw(16);
             transform: rotate(-37.66deg);
             z-index: 1;
+            @include media((
+                    right: (sm:84px),
+                    top: (sm:12px),
+            ));
         }
 
         &--green {
             top: vw(85);
             left: vw(159);
             transform: matrix(0.94, -0.34, -0.34, -0.94, 0, 0);
+            @include media((
+                    left: (sm:35px),
+                    top: (sm:66px),
+            ));
         }
 
 
@@ -330,12 +437,22 @@
             top: vw(210);
             left: vw(19);
             width: vw(304);
+            @include media((
+                    top: (sm:88px),
+                    left: (sm:8px),
+                    width: (sm:127px),
+            ));
         }
 
         &--2 {
             width: vw(180);
             margin-left: vw(371);
             padding-top: vw(59);
+            @include media((
+                    width: (sm:75px),
+                    margin-left: (sm:156px),
+                    padding-top: (sm:24px),
+            ));
         }
     }
 
@@ -374,12 +491,20 @@
             top: vw(160);
             left: vw(175);
             transform: rotate(-37.66deg);
+            @include media((
+                    left: (sm:73px),
+                    top: (sm:67px),
+            ));
         }
 
         &--green {
             top: vw(362);
             right: vw(322);
             transform: matrix(0.88, 0.47, 0.47, -0.88, 0, 0);
+            @include media((
+                    right: (sm:135px),
+                    top: (sm:152px),
+            ));
         }
 
 
@@ -391,12 +516,22 @@
             top: vw(47);
             left: vw(2);
             width: vw(266);
+            @include media((
+                    top: (sm:19px),
+                    left: (sm:0.8px),
+                    width: (sm:111px),
+            ));
         }
 
         &--2 {
             width: vw(309);
             margin-left: vw(351);
             padding-top: vw(125);
+            @include media((
+                    width: (sm:130px),
+                    margin-left: (sm:147px),
+                    padding-top: (sm:52px),
+            ));
         }
     }
 
@@ -435,12 +570,20 @@
             left: vw(113);
             transform: matrix(0.74, -0.67, -0.67, -0.74, 0, 0);
             z-index: 1;
+            @include media((
+                    left: (sm:47px),
+                    top: (sm:24px),
+            ));
         }
 
         &--green {
             top: vw(302);
             right: vw(102);
             transform: matrix(0.88, 0.47, 0.47, -0.88, 0, 0);
+            @include media((
+                    right: (sm:42px),
+                    top: (sm:126px),
+            ));
         }
 
 
@@ -451,6 +594,11 @@
             width: vw(95);
             margin-left: vw(202);
             padding-top: vw(45);
+            @include media((
+                    width: (sm:40px),
+                    margin-left: (sm:85px),
+                    padding-top: (sm:19px),
+            ));
         }
 
         &--2 {
@@ -458,6 +606,11 @@
             top: vw(113);
             left: vw(337);
             width: vw(92);
+            @include media((
+                    top: (sm:47px),
+                    left: (sm:141px),
+                    width: (sm:38px),
+            ));
         }
     }
 
@@ -495,12 +648,20 @@
             left: vw(150);
             transform: matrix(0.94, 0.35, 0.35, -0.94, 0, 0);
             z-index: 1;
+            @include media((
+                    left: (sm:63px),
+                    top: (sm:99px),
+            ));
         }
 
         &--green {
             top: vw(317);
             right: vw(30);
             transform: matrix(0.88, -0.48, -0.48, -0.88, 0, 0);
+            @include media((
+                    right: (sm:12px),
+                    top: (sm:133px),
+            ));
         }
 
 
@@ -512,12 +673,22 @@
             top: vw(38);
             right: vw(389);
             width: vw(252);
+            @include media((
+                    top: (sm:16px),
+                    right: (sm:163px),
+                    width: (sm:105px),
+            ));
         }
 
         &--2 {
             width: vw(135);
             margin-left: vw(345);
             padding-top: vw(146);
+            @include media((
+                    width: (sm:56px),
+                    margin-left: (sm:145px),
+                    padding-top: (sm:61px),
+            ));
         }
     }
 
@@ -557,6 +728,10 @@
             top: vw(296);
             left: vw(282);
             transform: matrix(0.94, 0.35, 0.35, -0.94, 0, 0);
+            @include media((
+                    left: (sm:118px),
+                    top: (sm:124px),
+            ));
         }
 
         &--green {
@@ -564,6 +739,10 @@
             left: vw(3);
             transform: matrix(0.88, -0.48, -0.48, -0.88, 0, 0);
             z-index: 1;
+            @include media((
+                    left: (sm:1px),
+                    top: (sm:67px),
+            ));
         }
 
 
@@ -574,6 +753,11 @@
             width: vw(180);
             margin-top: vw(34);
             margin-left: vw(68);
+            @include media((
+                    width: (sm:75px),
+                    margin-top: (sm:14px),
+                    margin-left: (sm:28px),
+            ));
         }
 
 
@@ -604,6 +788,10 @@
             left: vw(54);
             transform: matrix(0.94, 0.35, 0.35, -0.94, 0, 0);
             z-index: 1;
+            @include media((
+                    left: (sm:22px),
+                    top: (sm:36px),
+            ));
         }
 
         &--green {
@@ -611,29 +799,43 @@
             right: vw(-21);
             transform: matrix(0.88, -0.48, -0.48, -0.88, 0, 0);
             z-index: 1;
+            @include media((
+                    right: (sm:-8px),
+                    top: (sm:122px),
+            ));
         }
 
 
     }
 
     .product__prod-pic {
-        &--2 {
+        &--1 {
             position: absolute;
             top: vw(190);
             right: vw(63);
             width: vw(142);
+            @include media((
+                    top: (sm:79px),
+                    right: (sm:26px),
+                    width: (sm:59px),
+            ));
         }
 
-        &--1 {
+        &--2 {
             width: vw(281);
             margin-left: vw(27);
             padding-top: vw(9);
+            @include media((
+                    width: (sm:118px),
+                    margin-left: (sm:11px),
+                    padding-top: (sm:3px),
+            ));
         }
     }
 
 
     .prod-info {
-        &--1 {
+        &--2 {
             top: vw(49);
             right: vw(17);
             width: vw(250);
@@ -644,7 +846,7 @@
             }
         }
 
-        &--2 {
+        &--1 {
             top: vw(432);
             right: vw(1);
             width: vw(266);
@@ -668,6 +870,10 @@
             left: vw(203);
             transform: matrix(0.94, 0.35, 0.35, -0.94, 0, 0);
             z-index: 1;
+            @include media((
+                    left: (sm:85px),
+                    top: (sm:161px),
+            ));
         }
 
         &--green {
@@ -675,6 +881,10 @@
             right: vw(92);
             transform: matrix(0.88, -0.48, -0.48, -0.88, 0, 0);
             z-index: 1;
+            @include media((
+                    right: (sm:38px),
+                    top: (sm:27px),
+            ));
         }
 
 
@@ -686,12 +896,22 @@
             top: vw(301 - 88);
             left: vw(98);
             width: vw(171);
+            @include media((
+                    top: (sm:89px),
+                    left: (sm:41px),
+                    width: (sm:71px),
+            ));
         }
 
         &--2 {
             width: vw(197);
             margin-left: vw(381);
             margin-top: vw(-1);
+            @include media((
+                    width: (sm:82px),
+                    margin-left: (sm:160px),
+                    margin-top: (sm:0px),
+            ));
         }
     }
 

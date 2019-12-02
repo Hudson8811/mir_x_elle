@@ -1,10 +1,17 @@
 .a4-products{
   margin-top: vw(91);
+  @include media((
+          margin-top: (sm: 50px),
+  ));
 }
 
 #querstion{
   margin-top: vw(60);
   position: relative;
+  @include media((
+          padding-top: (md: 37px),
+          margin-top: (md: 40px),
+  ));
   #testover{
     z-index: 20;
     background: rgba(255, 255, 255, 0.51);
@@ -19,10 +26,27 @@
     display: flex;
     margin-top: vw(40);
     justify-content: space-between;
+    @include media((
+            margin-top: (sm: 25px),
+            display: (sm: block),
+    ));
     .vaiant{
       width: 30%;
       text-align: center;
       cursor: pointer;
+      box-sizing: border-box;
+      @include media((
+              width: (sm: 100%),
+              display: (sm: flex),
+              align-items: (sm: center),
+              padding: (sm: 10px),
+              text-align: (sm: left),
+      ));
+      +.vaiant{
+        @include media((
+                margin-top: (sm:  25px),
+        ));
+      }
       .img-block{
         display: flex;
         align-items: center;
@@ -30,6 +54,12 @@
         position: relative;
         height: vw(340);
         z-index: 1;
+        @include media((
+                height: (sm: 80px),
+                width: (sm: 116px),
+                flex-shrink: (sm: 0),
+                margin-right: (sm: 30px),
+        ));
         img{
           max-width: 100%;
           max-height: 100%;
@@ -53,6 +83,9 @@
           transition: 0.3s ease;
           opacity: 0;
           margin: 0;
+          @include media((
+                  display: (sm: none),
+          ));
         }
         &::before{
           background-image: url(../img/blue.png);
@@ -68,6 +101,11 @@
         position: relative;
         transition: 0.3s ease;
         transform: scale(1);
+        @include media((
+                margin-top: (sm:  0),
+                font-size: (sm:  14px),
+                line-height: (sm:  20px),
+        ));
         &::before{
           top: vw(-16);
           left: 50%;
@@ -81,6 +119,9 @@
           content: '';
           background: url(../img/triangle.svg) no-repeat center center;
           background-size: contain;
+          @include media((
+                  display: (sm:  none),
+          ));
         }
       }
 
@@ -90,14 +131,23 @@
         .img-block{
           img{
             top: vw(-25);
+            @include media((
+                    top: (sm: 0),
+            ));
           }
           &::before,
           &::after{
             opacity: 1;
+            @include media((
+                    opacity: (sm: 0),
+            ));
           }
         }
         .text{
           transform: scale(1.1);
+          @include media((
+                  transform: (sm:  scale(1)),
+          ));
         }
       }
 
@@ -194,15 +244,29 @@
   font-size: vw(20);
   line-height: vw(38);
   @include demi();
+  @include media((
+          width: (md: 30px),
+          height: (md: 30px),
+          font-size: (md: 14px),
+          line-height: (md: 30px),
+          top: (md: 0px),
+          left: (md: 0px),
+  ));
 }
 
 #otvet{
   display: none;
   margin-top: vw(60);
+  @include media((
+          margin-top: (sm:  30px),
+  ));
   .img{
     width: 100%;
     position: relative;
     margin-bottom: 30px;
+    @include media((
+            margin-bottom: (sm:  15px),
+    ));
     img{
       display: block;
       width: 100%;
@@ -225,6 +289,10 @@
         color: #000000;
         padding: 9px;
         background: #FCF036;
+        @include media((
+                padding: (sm:  8px),
+                font-size: (sm:  14px),
+        ));
       }
     }
   }
@@ -232,17 +300,31 @@
     display: flex;
     align-items: center;
     margin-top: 40px;
+    @include media((
+            display: (sm:  block),
+            margin-top: (sm:  20px),
+    ));
     .share{
       display: flex;
       align-items: center;
+      @include media((
+              flex-direction: (sm:  column),
+      ));
       .text{
         font-size: 16px;
         color: #000000;
+        @include media((
+                font-size: (sm:  12px),
+        ));
       }
       .social-block{
         margin-left: 10px;
         display: flex;
         align-items: center;
+        @include media((
+                margin-left: (sm:  0px),
+                margin-top: (sm:  15px),
+        ));
         .soc-link{
           border: none;
           cursor: pointer;
@@ -253,6 +335,12 @@
           align-items: center;
           justify-content: center;
           margin-left: 10px;
+          @include media((
+                  width: (sm:  35px),
+                  height: (sm:  35px),
+                  margin-left: (sm:  7px),
+                  margin-right: (sm:  7px),
+          ));
           &.vk{
             background: #5181B8;
             &:hover{
@@ -274,6 +362,10 @@
           svg{
             width: 20px;
             height: 20px;
+            @include media((
+                    width: (sm:  17px),
+                    height: (sm:  17px),
+            ));
             *{
               fill: #FFFFFF;
             }
@@ -285,10 +377,19 @@
       display: flex;
       align-items: center;
       margin-left: 80px;
+      @include media((
+              margin-left: (sm:  0),
+              margin-top: (sm:  20px),
+              flex-direction: (sm:  column),
+      ));
       .text{
         font-size: 16px;
         color: #000000;
         margin-right: 20px;
+        @include media((
+                font-size: (sm:  12px),
+                margin-right: (sm:  0),
+        ));
       }
       .again-link{
         display: block;
@@ -297,6 +398,13 @@
         border-radius: 100%;
         background: #FCF036 url("../img/again.svg") 10px 10px no-repeat;
         transition: 0.3s ease;
+        @include media((
+                width: (sm:  35px),
+                height: (sm:  35px),
+                background-position: (sm:  9px 9px),
+                background-size: (sm:  20px auto),
+                margin-top: (sm:  15px),
+        ));
         &:hover{
           transform: rotate(180deg);
         }

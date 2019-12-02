@@ -1,10 +1,14 @@
 .sidebar-cash-anim {
-    position: fixed;
+    position: sticky;
     z-index: 0;
-    top: -151px;
+    top: 0;
     display: block;
     width: vw(300);
-    background-image: url(../img/anim-sidebar.gif) no-repeat center center;
+    height: 150px;
+    background: url(../img/anim-sidebar.gif) no-repeat center center;
+    @include media((
+        width: (lg: 100%),
+    ));
 }
 
 .sidebar-cash {
@@ -13,15 +17,26 @@
     top: vw(118);
     box-sizing: border-box;
     width: vw(300);
+    margin-top: -32px;
     padding: vw(34) vw(35) vw(40) vw(36);
     text-align: center;
     border-radius: vw(40);
     background: #FFFFFF;
     box-shadow: 0px 0px vw(50) rgba(0, 104, 179, 0.29);
 
+    @include media((
+            width: (lg: 100%),
+            margin-top: (md: 0),
+            padding: (md: 0),
+            box-shadow: (md: none),
+            border-radius: (md: 0),
+    ));
     &__pic {
         width: 100%;
-
+        @include media((
+                width: (md: 150px),
+                margin: (md: 0 auto),
+        ));
         img {
             width: 100%;
         }
@@ -34,6 +49,15 @@
         font-weight: 500;
         font-size: vw(30);
         line-height: vw(32);
+        @include media((
+                font-size: (lg: 25px,sm:20px),
+                line-height: (lg: 28px,sm:22px),
+        ));
+        br{
+            @include media((
+                    display: (md: none),
+            ));
+        }
     }
 
     &__desc {
@@ -41,6 +65,10 @@
         text-align: center;
         font-size: vw(16);
         line-height: vw(21);
+        @include media((
+                font-size: (lg: 13px),
+                line-height: (lg: 17px),
+        ));
     }
 
     &__what {
@@ -51,6 +79,9 @@
         font-weight: 500;
         font-size: vw(16);
         line-height: vw(21);
+        @include media((
+                margin-top: (lg: 15px),
+        ));
     }
 
     &__reg {
@@ -59,7 +90,11 @@
         font-size: vw(16);
         line-height: vw(21);
         min-height: vw(85);
-
+        @include media((
+                font-size: (lg: 13px),
+                line-height: (lg: 17px),
+                min-height: (lg: 68px),
+        ));
         &:not(.active) {
             display: none;
         }
@@ -82,7 +117,13 @@
         font-size: vw(16);
         line-height: vw(21);
         transition: 0.3s ease;
-
+        @include media((
+                font-size: (lg: 12px),
+                line-height: (lg: 15px),
+                width: (lg: 148px),
+                height: (lg: 34px),
+                margin-top: (lg: 20px),
+        ));
         &:hover {
             background: #16458a;
         }
@@ -112,7 +153,12 @@
         line-height: vw(21);
         opacity: 1;
         transition: 0.3s ease;
-
+        @include media((
+                width: (lg: 30px),
+                height: (lg: 30px),
+                margin: (lg: 0 5px),
+                font-size: (lg: 14px),
+        ));
         &:not(.active) {
             opacity: .3;
             cursor: pointer;
@@ -125,9 +171,51 @@
     }
 }
 
+#mobile-mig{
+    display: none;
+    margin-top: 20px;
+    @include media((
+            display: (md: block),
+    ));
+}
+
 
 @media screen and (max-width:1000px) {
-    .sidebar-cash-anim {
+    .container__right {
         display: none;
     }
+}
+
+
+#mobile-fixed{
+    display: none;
+    position: fixed;
+    width: 89px;
+    right: 20px;
+    bottom: 20px;
+    z-index: 100;
+    cursor: pointer;
+    box-shadow: 0px 0px 10px rgba(0, 104, 179, 0.29);
+    img{
+        display: block;
+        width: 100%;
+    }
+    @include media((
+            display: (sm: block),
+    ));
+}
+
+.fancybox-content{
+    box-shadow: 0px 0px 50px rgba(0, 104, 179, 0.29);
+    border-radius: 40px;
+    padding: 24px 10px;
+    margin-top: 26px;
+    overflow: initial;
+}
+.fancybox-is-open .fancybox-bg{
+    opacity: 0;
+}
+.fancybox-slide--html .fancybox-close-small{
+    right: 15px;
+    top: -32px;
 }
